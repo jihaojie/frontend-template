@@ -1,18 +1,28 @@
 import request from '@/utils/request'
 
+export const base = '/api'
+// export function login(data) {
+//   return request({
+//     url: '/vue-admin-template/user/login',
+//     method: 'post',
+//     data
+//   })
+// }
+
 export function login(data) {
   return request({
-    url: '/vue-admin-template/user/login',
+    url: base + '/auth',
     method: 'post',
     data
   })
 }
 
+
 export function getInfo(token) {
   return request({
     url: '/vue-admin-template/user/info',
     method: 'get',
-    params: { token }
+    params: {token}
   })
 }
 

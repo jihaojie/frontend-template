@@ -32,6 +32,8 @@ module.exports = [
       const { username } = config.body
       const token = tokens[username]
 
+      // console.log(token)
+
       // mock error
       if (!token) {
         return {
